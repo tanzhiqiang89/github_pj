@@ -1,3 +1,4 @@
+%这是一个函数，输入6个关节后，就可以在这里获得对应的机械臂姿态
 function pic=DHfk6Dof_Workplace(th1,th2,th3,d4,th5,th6,fcla,fplot)
 % close all
 global Link
@@ -27,11 +28,11 @@ Link(7).th=th6*pi/180;
 p0=[0,0,0]';
 
 for i=1:7
-Matrix_DH_Ln(i);
+Matrix_DH_Ln(i);     %1到7的正运动学变换矩阵
 end
 
 for i=2:7
-      Link(i).A=Link(i-1).A*Link(i).A;
+      Link(i).A=Link(i-1).A*Link(i).A;  %6个矩阵相乘，得出总变换矩阵。
       Link(i).p= Link(i).A(:,4);
       Link(i).n= Link(i).A(:,1);
       Link(i).o= Link(i).A(:,2);
@@ -46,8 +47,8 @@ end
 
 grid on;
 % view(134,12);
-axis([-600,600,-600,600,-400,700]);
-xlabel('x');
+axis([-600,600,-600,600,-400,700]);   %三维画图空间限制
+xlabel('x');                    %坐标标签
 ylabel('y');
 zlabel('z');
 drawnow;

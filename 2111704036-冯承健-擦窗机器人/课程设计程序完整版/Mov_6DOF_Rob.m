@@ -1,3 +1,4 @@
+%这个m是想让6个轴单独动一下
 close all;
 clear;
 

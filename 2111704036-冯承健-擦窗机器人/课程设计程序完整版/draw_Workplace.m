@@ -1,3 +1,4 @@
+%这也是一种绘制工作空间的代码程序，和draw_6DOF_Workplace相比，这个更加直接
 close all;
 clear;
 
@@ -44,9 +45,9 @@ for th1=-180:10:180
                                 [ sin(pi/2 + theta6),  cos(pi/2 + theta6), 0, 50*sin(pi/2 + theta6)]
                                 [                  0,                   0, 1,                     0]
                                 [                  0,                   0, 0,                     1]];
-                        A = A1 * A2 * A3 * A4 * A5 * A6;
+                        A = A1 * A2 * A3 * A4 * A5 * A6;     %正运动学方程
             
-                        point1(num) = A(1,4);
+                        point1(num) = A(1,4);            %point是一维多元数组
                         point2(num) = A(2,4);
                         point3(num) = A(3,4);
                         num = num + 1;  

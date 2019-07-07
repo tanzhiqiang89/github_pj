@@ -1,4 +1,5 @@
-function J=Jacobian6DoF_Ln(th1,th2,th3,d4,th5,th6)
+%雅可比矩阵
+function J=Jacobian6DoF_Ln(th1,th2,th3,d4,th5,th6)  %输进6轴姿态，输出
 % close all
 global Link
 
@@ -13,12 +14,12 @@ Link(6).th=th5*pi/180;
 Link(7).th=th6*pi/180;
    
 for i=1:7
-Matrix_DH_Ln(i);
+Matrix_DH_Ln(i);  %整合出Link(i).A，Link(i).p，Link(i).n，Link(i).o，Link(i).a
 end
 
 Link(1).p=Link(1).p(1:3);
 for i=2:7
-      Link(i).A=Link(i-1).A*Link(i).A;
+      Link(i).A=Link(i-1).A*Link(i).A; %6个相乘得出正运动方程，Link(7)就是最终的正运动学方程
       Link(i).p= Link(i).A(:,4);
       Link(i).n= Link(i).A(:,1);
       Link(i).o= Link(i).A(:,2);
