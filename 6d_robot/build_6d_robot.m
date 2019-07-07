@@ -12,11 +12,11 @@ radian=180/pi; %弧度
  
 %% DH法建立模型,关节角，连杆偏移，连杆长度，连杆扭转角，关节类型（0转动，1移动）
 L(1) = Link( 'd',0  ,  'a',0,   'alpha',pi/2, 'offset',0   );
-L(2) = Link( 'd',0   ,  'a',5, 'alpha',-pi/2  , 'offset',0  );
+L(2) = Link( 'd',0   ,  'a',100, 'alpha',-pi/2  , 'offset',0  );
 L(3) = Link( 'd',0   ,  'a',0, 'alpha',pi/2  , 'offset',0   );
-L(4) = Link( 'd',0   ,  'a',5,  'alpha',-pi/2, 'offset',0   );
+L(4) = Link( 'd',0   ,  'a',100,  'alpha',-pi/2, 'offset',0   );
 L(5) = Link( 'd',0   ,  'a',0,   'alpha',pi/2 , 'offset',0);
-L(6) = Link( 'd',0  ,  'a',5,   'alpha',0  ,  'offset',0  );
+L(6) = Link( 'd',0  ,  'a',100,   'alpha',0  ,  'offset',0  );
 plotopt = {'noraise', 'nowrist', 'nojaxes', 'delay',0};
 tool_char=[1 0 0 0;
            0 1 0 0;

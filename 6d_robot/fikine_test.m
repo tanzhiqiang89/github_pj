@@ -26,3 +26,6 @@ q=robot.getpos()
 
 q2=robot.ikine(p1)  %逆运动学
 j0=robot.jacob0(q2)    %雅可比矩阵
+
+p3=robot.fkine([pi/4,-pi/6,pi/6,pi/4,-pi/6,pi/6])
+robot.plot([pi/4,-pi/6,pi/6,pi/4,-pi/6,pi/6])
