@@ -1,5 +1,4 @@
-%这是Rub_Window_IK擦窗程序用到的正运动学函数
-function pic=DHfk6Dof(th1,th2,th3,d4,th5,th6,fcla,fplot)  %fcla，fplot是1的话，分别是显示框架和机械臂
+function pic=DHfk6Dof(th1,th2,th3,d4,th5,th6,fcla,fplot)
 % close all
 global Link
 
